@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(77, 87, 104);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: auto;
+   
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background-image: url("https://img.freepik.com/free-photo/view-3d-cloud_23-2151113470.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.box {
+    display: none;
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#city_name {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#search {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#search>img {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+
+#tempicon,
+#humidicon,
+#windicon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#tempicon img,
+#humidicon img,
+#windicon img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#temp,
+#humid,
+#wind {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (min-width: 600px) {
+    .box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #tempicon img,
+    #humidicon img,
+    #windicon img {
+        height: 60px;
+    }
+
+    #temp,
+    #humid,
+    #wind {
+        font-size: 1.75rem;
+       
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    #tempicon img,
+    #humidicon img,
+    #windicon img {
+        height: 70px;
+    }
+
+    #temp,
+    #humid,
+    #wind {
+        font-size: 2rem;
+    }
+}
